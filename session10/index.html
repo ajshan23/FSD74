@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #sample{
+            width: 200px;
+            display: grid;
+            grid-template-columns: 10px 1fr 1.5fr;
+            /* grid-template-columns: 1fr 3fr 1fr; */
+            /* 200/5=40 , 40 *1 , 40*3, 40*1 */
+        }
+        .bsox{
+           display: flex;
+           height: 60px;
+           justify-content: center;
+           align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="sample">
+        <div class="box " style="background-color: red;">1</div>
+        <div class="box " style="background-color: blue;">2</div>
+        <div class="box "  style="background-color: green   ;">3</div>
+        <div class="box " style="background-color: blue;">4</div>
+        <div class="box " style="background-color: white;">5</div>
+        <div class="box " style="background-color: red;">6</div>
+        <div class="box " style="background-color: green;">7</div>
+        <div class="box " style="background-color: red;">8</div>
+        <div class="box " style="background-color: green;">9</div>
+    </div>
+</body>
+</html>

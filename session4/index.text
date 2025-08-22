@@ -1,0 +1,15 @@
+
+html vs html5
+
+generic tags (div ,span) vs introduced semantic tags (footer, header), seo , better readability
+
+audio/video 
+External plugins vs Native audio tag ,video tag ,<audio></audio>, <video></video>
+
+graphics animation
+
+external tools vs <canvas></canvas>
+
+forms
+
+basic forms vs color, search ,range 

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebspeechAPI</title>
+
+</head>
+
+<body>
+    <section>
+        <h2>Text to Speech</h2>
+        <input type="text" id="textInput" placeholder="Enter the text">
+        <button onclick="speak()">Click me to speak</button>
+        <!--comment -->
+    </section>
+    <section>
+        <h2> Speech to Text</h2>
+        <button onclick="speak()">Start listening</button>
+        <p id="output"></p>
+    </section>
+    <script lang="javascript">
+        //set of code that can be called =>function ,it is reusable 
+        //dom , document object model 
+        function speak() {
+            const data = document.getElementById("textInput");
+
+            const text = data.value;
+
+            const utterance = new SpeechSynthesisUtterance(text);
+            utterance.lang = "en-US";
+            utterance.pitch = 1;
+
+            speechSynthesis.speak(utterance);
+        }
+
+        function startListening(){
+            const SpeechReco=window.SpeechRecognition || window.webkitSpeechRecognition;
+
+            const reco=new SpeechReco();
+            reco.lang='en-US';
+            
+            reco.onresult =(event)=>{
+                const transcript= event.results[0][0].transcript;
+                document.getElementById("output").innerText="You said :"+transcript;
+            }
+            rec.start()
+        }
+
+
+    </script>
+</body>
+
+</html>

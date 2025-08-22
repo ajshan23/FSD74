@@ -1,0 +1,33 @@
+css -> cascading style sheet
+latest version css3
+
+used to control and enhance look of html elements
+
+css with different usecase
+
+inline css
+internal css
+external css
+
+css selectors
+an selector is a pattern used to select HTML elements so we can style them
+
+id selector
+id     ajmal      #ajmal   paragraphn color , para id is ajmal
+
+class selector
+class  bg    <p id="pranav" class="bg">Pranav k</p>
+    <p id="ajmal" class="bg">Ajmal</p>
+    class="bg"  
+    .bg {
+    background-color: lightblue ;
+}
+
+universal selector  * 
+*{
+
+}
+
+element selector
+
+grouping selector
