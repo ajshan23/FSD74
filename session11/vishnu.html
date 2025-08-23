@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flipkart</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            background-color: rgb(237, 236, 236);
+        }
+      #nav_bar {
+      
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: white;
+        height: 70px;
+        
+      }
+      .logo {
+        background-color: grey;
+        width: 20px;
+        height: fit-content;
+      }
+      .flip {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 42px;
+      }
+
+      input {
+        height: 38px;
+        border-radius: 10px;
+        margin-left: 40px;
+        font-size: 18px;
+        width: 45rem;
+        box-sizing: border-box;
+        border: none;
+        background-color: rgba(180, 216, 243, 0.262);
+        background-image: url("./images/search.png");
+        background-size: 20px 18px;
+        background-blend-mode:lighten;
+        background-position: 30px 10px;
+        background-repeat: no-repeat;
+        padding: 12px 20px 12px 80px;
+      }
+      .login {
+        display: grid;
+        grid-template-columns: 1fr 1fr 2fr 1fr;
+        align-items: center;
+        gap: 64px;
+        margin-right: 7rem;
+      }
+      .login a {
+        display: flex;
+        align-items: center;
+        font-size: 18px;
+      }
+      a {
+        text-decoration: none;
+        color: black;
+      }
+
+      #section_1{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        background-color: white;
+        margin: 10px 20px;
+        gap: 40px;
+        height: 160px;
+        padding: 0px 180px 0px 180px;
+
+      }
+
+      .more a{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 14px;
+        font-size: 14px;
+        font-weight: bold;
+
+      }
+
+      #section_2{
+        height: 400px;
+        background-color: white;
+        padding: 4px 10px 8px 25px;
+        margin: 20px 20px ;
+        font-size: 23px;
+        color: rgba(0, 0, 0, 0.816);
+      }
+
+      .items{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+      }
+      .items span{
+        font-size: 21px;
+      }
+      .bold{
+        font-weight: bold;
+      }
+      .products{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr  1fr 1fr 1fr ;
+        align-items: center;
+        margin-top: 12px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- header -->
+    <header style="position: sticky;top: 0;">
+      <!-- for navigation buttons  -->
+      <nav id="nav_bar">
+        <!-- logo and search bar -->
+        <div class="flip">
+          <img
+            src="./images/flipkart_logo.svg"
+            alt="Flipkart logo"
+            style="width: 160px; height: 60px"
+          />
+          <form class="search_bar">
+            <input
+              type="text"
+              placeholder="Search for Products, Brand and more"
+            />
+          </form>
+        </div>
+        <!-- login, cart and seller buttons  -->
+        <div class="login">
+          <!-- login button -->
+          <a href="https://www.flipkart.com/account/login?ret=/">
+            <img
+              src="./images/profile.png"
+              alt="profile"
+              style="height: 24px; margin-right: 10px"
+            />
+            <span>Login</span>
+          </a>
+          <!-- cart button -->
+          <a href="https://www.flipkart.com/viewcart?marketplace=FLIPKART">
+            <img
+              src="./images/shopping-cart.png"
+              alt="profile"
+              style="height: 28px; margin-right: 10px"
+            />
+            <span>Cart</span>
+          </a>
+          <!-- seller button -->
+          <a
+            href="https://seller.flipkart.com/sell-online?utm_source=fkwebsite&utm_medium=websitedirect"
+            style="width: 40px;"
+          >
+            <img
+              src="./images/shop.png"
+              alt="profile"
+              style="height: 24px; margin-right: 10px"
+            />
+            <span>seller</span>
+          </a>
+          <img src="./images/more.png" alt="more" style="height: 28px" />
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <!-- section 1 -->
+        <section id="section_1">
+            <div class="more">
+                <a href="#">
+                  <img src="./images/bike.webp" alt="bike" style="width: 70px; height: 70px;">
+                  <span>Minuite</span>
+                </a>
+            </div>
+            <div class="more">
+                <a href="#">
+                  <img src="./images/mobiles.webp" alt="bike" style="width: 70px; height: 70px;">
+                  <span>Mobiles & Tablets</span>
+                </a>
+            </div>
+            <div class="more">
+                <a href="#">
+                  <img src="./images/fashion.webp" alt="bike" style="width: 70px; height: 70px;">
+                  <span>Fashion</span>
+                </a>
+            </div>
+            <div class="more">
+                <a href="#">
+                  <img src="./images/electronics.webp" alt="bike" style="width: 70px; height: 70px;"style="width: 70px; height: 70px;">
+                  <span>Electronics</span>
+                </a>
+            </div>
+            <div class="more">
+                <a href="#">
+                  <img src="./images/furniture.webp" alt="bike" style="width: 70px; height: 70px;">
+                  <span>Home & Furniture</span>
+                </a>
+            </div>
+            <div class="more">
+                <a href="#">
+                  <img src="./images/home_appliences.webp" alt="bike" style="width: 70px; height: 70px;">
+                  <span>Tv & Appliances</span>
+                </a>
+            </div>
+            <div class="more">
+                <a href="#">
+                  <img src="./images/flight.webp" alt="bike" style="width: 70px; height: 70px;">
+                  <span>Flights</span>
+                </a>
+            </div>
+            <div class="more">
+                <a href="#">
+                  <img src="./images/toys.webp" alt="bike" style="width: 70px; height: 70px;">
+                  <span>Beauty, Food...</span>
+                </a>
+            </div>
+            <div class="more">
+                <a href="#">
+                  <img src="./images/grocery.webp" alt="bike" style="width: 70px; height: 70px;">
+                  <span>Ggrocery</span>
+                </a>
+            </div>
+        </section>
+
+        <!-- section 2 Electronics-->
+
+        <section id="section_2">
+            
+              <h3>Best of Electronics </h3>
+
+              <div class="products">
+                  <div class="items">
+                      <img src="https://m.media-amazon.com/images/I/51LxiMjx3XL._UF1000,1000_QL80_.jpg" alt="image" style="width: 180px; height: 180px;">
+                      <span>Best TrueWireless H...</span>
+                      <span class="bold">Grab Now</span>
+                  </div>
+                  <div class="items">
+                      <img src="https://png.pngtree.com/png-vector/20240124/ourmid/pngtree-modern-mirrorless-camera-ready-to-records-with-blank-screen-png-image_11479601.png" alt="image" style="width: 180px; height: 180px;">
+                      <span>Top Mirrorless Camera...</span>
+                      <span class="bold">Shop Now..</span>
+                  </div>
+                  <div class="items">
+                      <img src="https://images.samsung.com/is/image/samsung/p6pim/in/ls24f320gawxxl/gallery/in-essential-s3-s32gf-ls24f320gawxxl-thumb-546639459?$UX_EXT2_PNG$" alt="image" style="width: 180px; height: 180px;">
+                      <span>Monitors</span>
+                      <span class="bold">Form ₹6999</span>
+                  </div>
+                  <div class="items">
+                      <img src="https://dukaan.b-cdn.net/700x700/webp/upload_file_service/9d59d44d-9a20-4c80-8411-42418afe779c/1383.jpeg" alt="image" style="width: 180px; height: 180px;">
+                      <span>Printers</span>
+                      <span class="bold">Form ₹3999</span>
+                  </div>
+                  <div class="items">
+                      <img src="https://www.gonoise.com/cdn/shop/files/1_c95e5561-4f66-413d-b143-42d31821e554.webp?v=1721392308" alt="image" style="width: 180px; height: 180px;">
+                      <span>Smart Watches</span>
+                      <span class="bold">Form ₹1,399</span>
+                  </div>
+                  <div class="items">
+                      <img src="https://image01-in.oneplus.net/media/202406/19/ec64eb41a8e787a798be1b71c13a51bb.png?x-amz-process=image/format,webp/quality,Q_80" alt="image" style="width: 180px; height: 180px;">
+                      <span>Mobilephones</span>
+                      <span class="bold">Form ₹12,999</span>
+                  </div>
+              </div>
+
+        </section>
+        <!-- section 3 Beauty, Food Toys and more-->
+
+        <section id="section_2">
+            
+              <h3>Beauty, Food, Toys and more </h3>
+
+              <div class="products">
+                  <div class="items">
+                      <img src="https://m.media-amazon.com/images/I/71KO+B2m5wL._UF350,350_QL80_.jpg" alt="image" style="width: 180px; height: 180px;">
+                      <span>Coffee Powder</span>
+                      <span class="bold">Upto 80% off</span>
+                  </div>
+                  <div class="items">
+                      <img src="https://m.media-amazon.com/images/I/81MFfnpOQGL.jpg" alt="image" style="width: 180px; height: 180px;">
+                      <span>Geareed Bicycle</span>
+                      <span class="bold">Upto 70% off</span>
+                  </div>
+                  <div class="items">
+                      <img src="https://t3.ftcdn.net/jpg/00/34/70/32/360_F_34703220_TiczZRk73LnvUcvt2J2qj57mKzwKAtBT.jpg" alt="image" style="width: 180px; height: 180px;">
+                      <span>Top selling stationary</span>
+                      <span class="bold">Form ₹49</span>
+                  </div>
+                  <div class="items">
+                      <img src="https://m.media-amazon.com/images/I/713oB4yjXzL.jpg" alt="image" style="width: 180px; height: 180px;">
+                      <span>Best of Action Toys</span>
+                      <span class="bold">Form ₹3999</span>
+                  </div>
+                  <div class="items">
+                      <img src="https://t4.ftcdn.net/jpg/02/47/16/45/360_F_247164522_gI1iQIp2Vo2ZR2NgaUPzx5PR6PX1Qvkx.jpg" alt="image" style="width: 180px; height: 180px;">
+                      <span>Remote Control Toys</span>
+                      <span class="bold">Upto 80% off</span>
+                  </div>
+                  <div class="items">
+                      <img src="https://www.yourprint.in/new-admin-ajax.php?action=resize_outer_image&cfcache=all&url=med-s3/yP-mplace/Toys/YPB08MCHZFXX_1.jpg&resizeTo=600" alt="image" style="width: 180px; height: 180px;">
+                      <span>Soft Toys</span>
+                      <span class="bold">Upto 70% off</span>
+                  </div>
+              </div>
+        </section>
+        <!-- section 4 Sports Healthcare & and more-->
+
+        <section id="section_2">
+            
+              <h3>Sports, Healthcare & and more</h3>
+
+              <div class="products">
+                  <div class="items">
+                      <img src="https://cdn.montessoriservices.com/product/1200/c215_fsh14_p_1.jpg" alt="image" style="width: 180px; height: 180px;">
+                      <span>Puzzles and Cubes</span>
+                      <span class="bold">Form ₹79</span>
+                  </div>
+                  <div class="items">
+                      <img src="https://craftdeals.in/wp-content/uploads/2023/06/6137OQJvFoL.jpg" alt="image" style="width: 180px; height: 180px;">
+                      <span>Musical Toys</span>
+                      <span class="bold">Under ₹199</span>
+                  </div>
+                  <div class="items">
+                      <img src="https://m.media-amazon.com/images/I/61Xzj6pJDGL._UF894,1000_QL80_.jpg" alt="image" style="width: 180px; height: 180px;">
+                      <span>Tea Powder</span>
+                      <span class="bold">Upto 75% off</span>
+                  </div>
+                  <div class="items">
+                      <img src="https://rukminim1.flixcart.com/image/240/240/krgohow0/learning-toy/1/a/h/mapology-ultimate-indian-combo-india-with-capitals-map-puzzle-original-imag59f2vyh63v9x.jpeg?q=60" alt="image" style="width: 180px; height: 180px;">
+                      <span>Learning & Education</span>
+                      <span class="bold">Upto 80% off</span>
+                  </div>
+                  <div class="items">
+                      <img src="https://pureandsure.in/cdn/shop/files/Honey-f.jpg?v=1728897280&width=2048" alt="image" style="width: 180px; height: 180px;">
+                      <span>Honey </span>
+                      <span class="bold">Upto 75% off</span>
+                  </div>
+                  <div class="items">
+                      <img src="https://m.media-amazon.com/images/I/71d0wtpbxJL.jpg" alt="image" style="width: 180px; height: 180px;">
+                      <span>Breakfast Cereal</span>
+                      <span class="bold">Upto 75% off</span>
+                  </div>
+              </div>
+        </section>
+    </main>
+  </body>
+</html>
