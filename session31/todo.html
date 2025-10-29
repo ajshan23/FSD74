@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            background: linear-gradient(to top, blue, white);
+        }
+
+        button {
+            transition: transofrm 0, 8 ease;
+        }
+
+        button:hover {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+
+<body>
+    <H1 class="d-flex justify-content-center pt-5 text-primary "><span
+            class="border border-3 border-primary px-5 py-3 rounded">Todo list</span></H1>
+
+    <div class="container d-flex flex-column align-items-center">
+        <div class="d-flex justify-content-center gap-2">
+            <span class="border border-3 border-primary">
+                <input type="text" id="todoInput" style="border: none; outline: none;background: transparent; "
+                    class="text-secondary">
+            </span>
+            <button class="bg-primary text-light" id="Addbutton">Add</button>
+        </div>
+        <div class="w-50 mt-2  border border-2 border-primary d-flex flex-column gap-3 px-3 py-3" style=""
+            id="listingParent">
+
+           
+
+
+        </div>
+    </div>
+
+
+
+    <script>
+        let refInput = document.getElementById("todoInput");
+        let collectedData = [];
+        let Addbutton = document.getElementById("Addbutton");
+        let listingParent = document.getElementById("listingParent");
+
+        Addbutton.addEventListener("click", (e) => {
+            if (refInput.value.length === 0) {
+                return;
+            }
+            collectedData.push(refInput.value);
+            console.log(collectedData);
+
+            // listingParent.innerHTML += `<div class="bg-white border border-2 border-primary rounded d-flex justify-content-between px-2 py-2"
+            //     style="height: 50px;">
+            //     <span>${refInput.value}</span>
+            //     <button style="outline: none;background: transparent; border: none;"
+            //         class="bg-danger text-white ">Delete</button>
+            // </div>`;
+
+            let todoDiv = document.createElement("div");
+            todoDiv.style.height = "50px";
+            todoDiv.className = "bg-white border border-2 border-primary rounded d-flex justify-content-between px-2 py-2";
+            todoDiv.innerHTML = ` <span>${refInput.value}</span>
+                <button style="outline: none;background: transparent; border: none;"
+                    class="bg-danger text-white deleteBtn">Delete</button>`
+            listingParent.appendChild(todoDiv);
+
+            refInput.value = "";
+
+            todoDiv.querySelector(".deleteBtn").addEventListener("click",()=>{
+                listingParent.removeChild(todoDiv);
+            })
+            
+
+        })
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

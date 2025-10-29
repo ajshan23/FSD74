@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>DOM Selectors Example</title>
+    <style>
+        /* #title {
+            color: red;
+        } */
+
+        .text {
+            color: blue;
+        }
+        h1{
+            background-color: blanchedalmond;
+        }
+
+    </style>
+</head>
+
+<body>
+    <h1 id="title">Hello World</h1>
+    <button id="clickme">click me to change content</button>
+    <p class="text">First paragraph</p>
+    <p class="text">Second paragraph</p>
+    <p class="text">third paragraph</p>
+    <ul>
+        <li>Apple</li>
+        <li>Banana</li>
+        <li>Mango</li>
+    </ul>
+    <script>
+        // let x = document.getElementById("title");
+        // let clickme=document.getElementById("clickme");
+        // clickme.addEventListener("click",()=>{
+        //      x.textContent="hi from ajmal";
+        // })
+
+        // let classBased = document.getElementsByClassName("text");
+        // //array of elements =>when we use getElementsByClassName
+        // console.log(classBased);
+
+        // let clickme = document.getElementById("clickme");
+
+        // clickme.addEventListener("dblclick", () => {
+        //     classBased[0].textContent = "hi from ajmal";
+        // })
+
+        // let refOfp=document.getElementsByTagName("p");
+        // console.log('====================================');
+        // console.log(refOfp);
+        // console.log('====================================');
+
+        let x=document.getElementById("title");
+        x.style.color="blue"
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <h1>The Window Object</h1>
+    <h2>The alert() Method</h2>
+
+    <p>Click the button to display an alert box.</p>
+
+    <button id="try">Try it</button>
+
+    <script>
+
+        const Try=document.getElementById("try");
+        Try.addEventListener("click", () => {
+            let value = prompt("hi enter your name");
+            alert("hi " + value);
+        })
+
+    </script>
+
+</body>
+
+</html>
+

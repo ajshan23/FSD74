@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   
+    <button id="clckbro" onclick="functionName()">click me </button>
+    <p id="msg"></p>
+    <input type="text" id="inputBox" placeholder="Type here ">
+    <script>
+        let count =20;
+        let btn=document.getElementById("clckbro");
+        let para=document.getElementById("msg");
+        // para.onclose=functionName;
+        btn.addEventListener("click",function (e){
+            para.textContent="notification sent successfully"
+        })
+        
+        btn.addEventListener("click",(sugu)=>{
+            para.style.color="red";
+        })
+
+        // addEventListener("eventName",function)
+        
+        let inputBox=document.getElementById("inputBox");
+        
+        inputBox.addEventListener("change",function(e) {
+            console.log(e.target.value);
+        })
+
+    </script>
+</body>
+</html>
