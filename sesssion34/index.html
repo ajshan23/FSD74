@@ -700,18 +700,10 @@
                     <img src="" alt="Product Image" id="mainImg">
                 </div>
                 <div class="thumbnail-container" id="thumbnails">
-                    <div class="thumbnail active">
-                        <img src="" alt="Thumbnail 1">
-                    </div>
-                    <div class="thumbnail">
-                        <img src="" alt="Thumbnail 2">
-                    </div>
-                    <div class="thumbnail">
-                        <img src="" alt="Thumbnail 3">
-                    </div>
-                    <div class="thumbnail">
-                        <img src="" alt="Thumbnail 4">
-                    </div>
+
+
+                   
+
                 </div>
             </div>
 
@@ -834,6 +826,7 @@
         let productPrice = document.getElementById("productPrice");
         let productDescription = document.getElementById("productDescription");
         let mainImg = document.getElementById("mainImg");
+        let parentOfThumbanails = document.getElementById("thumbnails");
         // function setDataIntoUi(productData) {
         //     productTitle.textContent = productData.title;
         //     productPrice.textContent = `$${productData.price}`;
@@ -854,24 +847,56 @@
         //    setDataIntoUi(dataOfAProduct);
         // }
 
+        const setRelatedProducts = (arryOFProduct) => {
+            // parentOfThumbanails
+
+            arryOFProduct.forEach((value) => {
+                let newDiv = document.createElement("div");
+                newDiv.className = "thumbnail";
+                let newImg = document.createElement("img");
+                newImg.src=`${value.image}`;
+                newDiv.appendChild(newImg);
+                parentOfThumbanails.appendChild(newDiv);
+
+                newDiv.addEventListener("click",()=>{
+                    params.set("id",value.id);
+                    console.log('====================================');
+                    console.log(params.get("id"));
+                    console.log('====================================');
+                    window.history.replaceState({},"",`index.html?${params}`);
+                    apiCallForAProduct(value.id)
+                    // index.html?id=8
+                })
+            });
+        }
+
         const apiCallForAProduct = async (id) => {
             let response = await fetch(`https://fakestoreapi.com/products/${id}`);
             let dataOfAProduct = await response.json();
-            console.log(dataOfAProduct);
+            // console.log(dataOfAProduct);
             setDataIntoUi(dataOfAProduct);
         }
-
+        const apiCallForRelatedProducts = async () => {
+            let response = await fetch("https://fakestoreapi.com/products");
+            let data = await response.json();
+            let slicedData = data.slice(0, 10);
+            console.log('====================================');
+            console.log(data);
+            console.log(slicedData);
+            console.log('====================================');
+            setRelatedProducts(slicedData);
+        }
 
         // let url=window.location.href;
         // console.log('====================================');
         // console.log(url);
         // console.log('====================================');
-
-        let params=new URLSearchParams(window.location.search);
-        let id=params.get("id");
+  
+        let params = new URLSearchParams(window.location.search);
+        let id = params.get("id");
 
         apiCallForAProduct(id);
-
+        apiCallForRelatedProducts();
     </script>
 </body>
 
